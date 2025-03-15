@@ -12,7 +12,7 @@ namespace CompleteGraphQLDemo.Models
         public string Name { get; set; }
 
         [GraphQLDescription("Represent any LicenseKey")]
-        public string LicenseKey { get; set; }
+        public string LicenseKey { get; set; } = string.Empty;
 
         public ICollection<Command> Commands { get; set; } = new List<Command>();
     }

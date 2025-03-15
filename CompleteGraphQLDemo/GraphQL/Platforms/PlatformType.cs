@@ -22,17 +22,16 @@ namespace CompleteGraphQLDemo.GraphQL.Platforms
 
             descriptor
                 .Field(p => p.Commands)
-                .ResolveWith<Resolvers>(p => p.GetCommands(default!, default!))
+                //.ResolveWith<Resolvers>(p => p.GetCommands(default!, default!))
                 .Description("This is the list of available commands for this platform.");
         }
 
-        private class Resolvers
-        {
-            public IQueryable<Command> GetCommands([Parent] Platform platform, [Service] AppDbContext context)
-            {
-                var dsadas = platform;
-                return context.Commands.Where(p => p.PlatformId == platform.Id);
-            }
-        }
+        //private class Resolvers
+        //{
+        //    public IQueryable<Command> GetCommands([Parent] Platform platform, [Service] AppDbContext context)
+        //    {
+        //        return context.Commands.Where(p => p.PlatformId == platform.Id);
+        //    }
+        //}
     }
 }

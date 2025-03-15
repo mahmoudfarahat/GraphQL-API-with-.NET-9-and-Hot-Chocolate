@@ -3,6 +3,7 @@ using CompleteGraphQLDemo.GraphQL;
 using Microsoft.EntityFrameworkCore;
 using GraphQL.Server.Ui.Voyager;
 using CompleteGraphQLDemo.GraphQL.Platforms;
+using System.Data;
 
 namespace CompleteGraphQLDemo
 {
@@ -19,10 +20,18 @@ namespace CompleteGraphQLDemo
             builder.Services
                 .AddGraphQLServer()
                 .AddQueryType<Query>()
+                .AddMutationType<Mutation>()
+                .AddSubscriptionType<Subscription>()
                 .AddType<PlatformType>()
-                .AddProjections();
+                .AddType<CommandType>()
+                .AddProjections()
+                .AddFiltering()
+                .AddSorting()
+                .AddInMemorySubscriptions();
 
             var app = builder.Build();
+
+            app.UseWebSockets();
 
             app.UseRouting();
 
