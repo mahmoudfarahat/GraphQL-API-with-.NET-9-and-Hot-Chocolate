@@ -4,6 +4,7 @@ using CompleteGraphQLDemo.GraphQL.Platforms;
 using CompleteGraphQLDemo.Models;
 using HotChocolate.Execution.Processing;
 using HotChocolate.Subscriptions;
+using System.Text.Json;
 
 namespace CompleteGraphQLDemo.GraphQL
 {
@@ -45,5 +46,12 @@ namespace CompleteGraphQLDemo.GraphQL
 
             return new AddCommandPayload(command);
         }
+
+
+        public Book AddBook(String title, string author, JsonElement metadata)
+            => new Book(title, new Author(author), new List<MetaData> { new MetaData("something", metadata.ToString()) });
+
+ 
+
     }
 }

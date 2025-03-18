@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using GraphQL.Server.Ui.Voyager;
 using CompleteGraphQLDemo.GraphQL.Platforms;
 using System.Data;
+using CompleteGraphQLDemo.Models;
 
 namespace CompleteGraphQLDemo
 {
@@ -24,6 +25,8 @@ namespace CompleteGraphQLDemo
                 .AddSubscriptionType<Subscription>()
                 .AddType<PlatformType>()
                 .AddType<CommandType>()
+                .AddType<MyTypeType>()
+                .AddType(new JsonType("Any",BindingBehavior.Implicit))
                 .AddProjections()
                 .AddFiltering()
                 .AddSorting()
@@ -39,6 +42,8 @@ namespace CompleteGraphQLDemo
             {
                 endpoints.MapGraphQL();
             });
+
+
             //app.UseGraphQLVoyager(new GraphQLVoyagerOptions());
             app.Run();
         }

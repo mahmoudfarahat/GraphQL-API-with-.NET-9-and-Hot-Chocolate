@@ -409,3 +409,5 @@ C:\Users\Mahmoud\Desktop\GraphQL-API-with-.NET-9-and-Hot-Chocolate\CompleteGraph
 C:\Users\Mahmoud\Desktop\GraphQL-API-with-.NET-9-and-Hot-Chocolate\CompleteGraphQLDemo\obj\Debug\net9.0\CompleteGraphQLDemo.pdb
 C:\Users\Mahmoud\Desktop\GraphQL-API-with-.NET-9-and-Hot-Chocolate\CompleteGraphQLDemo\obj\Debug\net9.0\CompleteGraphQLDemo.genruntimeconfig.cache
 C:\Users\Mahmoud\Desktop\GraphQL-API-with-.NET-9-and-Hot-Chocolate\CompleteGraphQLDemo\obj\Debug\net9.0\ref\CompleteGraphQLDemo.dll
+C:\Users\mahmoud-Farhat\Desktop\CompleteGraphQLDemo\CompleteGraphQLDemo\obj\Debug\net9.0\CompleteGraphQLDemo.sourcelink.json
+C:\Users\mahmoud-Farhat\Desktop\CompleteGraphQLDemo\CompleteGraphQLDemo\bin\Debug\net9.0\Newtonsoft.Json.dll
